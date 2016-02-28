@@ -53,7 +53,7 @@ set ignorecase		" Do case insensitive matching
 set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
-set hidden          " Hide buffers when they are abandonedset
+"set hidden          " Hide buffers when they are abandonedset
 set mouse=a		    " Enable mouse usage (all modes)
 set foldenable      "允许折叠
 "set foldmethod=marker "标志折叠
@@ -133,7 +133,7 @@ Plugin 'mhinz/vim-startify'
 "sublime text style multiple selections
 "Plugin 'terryma/vim-multiple-cursors'
 "Interactive command execution in Vim.
-Plugin 'Shougo/vimproc.vim'
+"Plugin 'Shougo/vimproc.vim'
 "Powerful shell implemented by vim.
 "Plugin 'Shougo/vimshell.vim'
 "Syntax checking hacks for vim
@@ -154,6 +154,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'vim-scripts/matchit.zip'
 "ctrl+p 搜索文件，buffer
 Plugin 'kien/ctrlp.vim' 
+Plugin 'rking/ag.vim'
 "Plugin 'Shougo/neosnippet'
 "Plugin 'Shougo/neosnippet-snippets'
 "php函数自动补全
@@ -197,6 +198,8 @@ nmap <leader>n :bn<cr>
 nmap <leader>p :bp<cr>
 nmap <leader>tn :tabNext<cr>
 nmap <leader>tp :tabprevious<cr>
+"启用zsh
+nmap <leader>sh :!zsh<cr>
 
 "leader toggles
 "nmap <leader>tt :TlistToggle<cr>
@@ -616,6 +619,9 @@ let g:phpqa_messdetector_autorun = 0
 let g:phpqa_codesniffer_autorun = 0
 let g:phpqa_codecoverage_autorun = 0
 " emmet 
-"let g:user_emmet_leader_key='<C-Z>'
-let g:user_emmet_leader_key="<c-y>"
-
+let g:user_emmet_leader_key = '<Leader>a'
+" Default mapping 多重光标
+"let g:multi_cursor_next_key='<Leader><Leader>n'
+"let g:multi_cursor_prev_key='<Leader><Leader>p'
+"let g:multi_cursor_skip_key='<Leader><Leader>x'
+"let g:multi_cursor_quit_key='<Esc>'
